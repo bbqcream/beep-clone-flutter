@@ -1,33 +1,61 @@
 import styled from "styled-components/native";
 
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp,
-} from "react-native-responsive-screen";
-
 export const Container = styled.View`
-  width: ${wp(80)}px;
-  height: ${hp(80) / 4}px;
-  background-color: #fff;
-  margin: ${wp(10)}px;
-  border-radius: 10px;
-  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  background-color: #323a45;
+`;
+
+export const TopContainer = styled.View`
+  display: flex;
   align-items: center;
+  justify-content: center;
+  height: 35%;
+  margin-top: 5%;
 `;
 
-export const Icon = styled.View`
-  width: ${hp(3)}px;
-  height: ${hp(3)}px;
-  background-color: #9d71fe;
-  border-radius: 4px;
-  margin-horizontal: ${wp(3)}px;
+export const Arrow = styled.Image`
+  left: 10%;
+  top: 10%;
+  position: absolute;
 `;
 
-export const Circle = styled.View`
-  margin-left: ${wp(35)}px;
-  width: ${hp(2)}px;
-  height: ${hp(2)}px;
-  background-color: #8d71fe;
-  border-radius: 100px;
-  margin-horizontal: ${wp(3)}px;
+export const TitleWrapper = styled.View`
+  display: flex;
+  width: 140px;
+  height: 149px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const Logo = styled.Image``;
+
+export const SubTitle = styled.Text`
+  font-size: 24px;
+  color: white;
+`;
+
+export const InputWrapper = styled.View`
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  gap: 15px;
+`;
+
+export const BottomContainer = styled.View`
+  width: 100%;
+  height: 65%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding-top: 20%;
+`;
+
+export const LoginInput = styled.TextInput`
+  width: 100%;
+  height: 66px;
+  border: 1px solid #c9c9c9;
+  padding-left: 20px;
+  border-radius: 5px;
 `;
