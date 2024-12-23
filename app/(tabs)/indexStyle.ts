@@ -1,6 +1,6 @@
 import styled from "styled-components/native";
 
-export const Container = styled.View`
+export const Container = styled.SafeAreaView`
   width: 100%;
   height: 100%;
   background-color: #323a45;
@@ -11,7 +11,6 @@ export const TopContainer = styled.View`
   align-items: center;
   justify-content: center;
   height: 35%;
-  margin-top: 5%;
 `;
 
 export const Arrow = styled.Image`
@@ -45,7 +44,7 @@ export const InputWrapper = styled.View`
 
 export const BottomContainer = styled.View`
   width: 100%;
-  height: 65%;
+  height: 70%;
   background-color: white;
   display: flex;
   align-items: center;
