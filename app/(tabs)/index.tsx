@@ -1,6 +1,5 @@
 import React from "react";
 import * as S from "./indexStyle";
-import { Button } from "react-native";
 
 export default function HomeScreen() {
   return (
@@ -14,10 +13,15 @@ export default function HomeScreen() {
       </S.TopContainer>
       <S.BottomContainer>
         <S.InputWrapper>
-          <S.LoginInput placeholder="안녕" />
+          <S.LoginInput placeholder="아이디" />
           <S.LoginInput placeholder="비밀번호" secureTextEntry={true} />
         </S.InputWrapper>
-        <Button title="로그인" onPress={() => alert("로그인 버튼 클릭됨")} />
+        <S.Button onPress={() => alert("로그인 버튼 클릭됨")}>
+          <S.ButtonText>로그인</S.ButtonText>
+        </S.Button>
+        <S.MoreLoginView>
+          <S.MoreLogin>아이디나 비밀번호를 잃어버리셨나요?</S.MoreLogin>
+        </S.MoreLoginView>
       </S.BottomContainer>
     </S.Container>
   );

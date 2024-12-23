@@ -50,6 +50,7 @@ export const BottomContainer = styled.View`
   display: flex;
   align-items: center;
   padding-top: 20%;
+  gap: 42px;
 `;
 
 export const LoginInput = styled.TextInput`
@@ -58,4 +59,31 @@ export const LoginInput = styled.TextInput`
   border: 1px solid #c9c9c9;
   padding-left: 20px;
   border-radius: 5px;
+`;
+
+export const Button = styled.TouchableOpacity`
+  width: 70%;
+  height: 60px;
+  background-color: #303a46;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const ButtonText = styled.Text`
+  color: white;
+  background-color: #303a46;
+  text-align: center;
+  font-size: 20px;
+`;
+
+export const MoreLoginView = styled.View`
+  width: 70%;
+  display: flex;
+  flex-direction: row-reverse;
+`;
+
+export const MoreLogin = styled.Text`
+  font-size: 14px;
+  color: #b2b2b2;
 `;
