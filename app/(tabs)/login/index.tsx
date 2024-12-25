@@ -1,15 +1,30 @@
 import React from "react";
 import * as S from "./indexStyle";
 import { StyleSheet } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { useNavigation } from "@react-navigation/native";
+import { StackNavigationProp } from "@react-navigation/stack";
 
-export default function HomeScreen() {
+type RootStackParamList = {
+  Splash: undefined;
+  Start: undefined;
+  Login: undefined;
+};
+
+type LoginScreenNavigationProp = StackNavigationProp<
+  RootStackParamList,
+  "Login"
+>;
+
+export default function Login() {
+  const navigation = useNavigation<LoginScreenNavigationProp>();
   return (
     <S.Container>
       <S.TopContainer>
-        <S.Arrow source={require("../../assets/images/arrow.png")} />
+        <S.ArrowTouch onPress={() => navigation.navigate("Start")}>
+          <S.Arrow source={require("../../../assets/images/arrow.png")} />
+        </S.ArrowTouch>
         <S.TitleWrapper>
-          <S.Logo source={require("../../assets/images/logo.png")} />
+          <S.Logo source={require("../../../assets/images/logo.png")} />
           <S.SubTitle>스마트한 관리</S.SubTitle>
         </S.TitleWrapper>
       </S.TopContainer>
@@ -28,7 +43,3 @@ export default function HomeScreen() {
     </S.Container>
   );
 }
-
-const Styles = StyleSheet.create({
-  container: {},
-});

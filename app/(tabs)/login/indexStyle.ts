@@ -13,6 +13,8 @@ export const TopContainer = styled.View`
   height: 35%;
 `;
 
+export const ArrowTouch = styled.TouchableOpacity``;
+
 export const Arrow = styled.Image`
   left: 10%;
   top: 10%;
