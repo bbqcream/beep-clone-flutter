@@ -1,5 +1,5 @@
 import React from "react";
-import * as S from "./indexStyle";
+import * as S from "../../style/home";
 import { StyleSheet } from "react-native";
 
 export default function Start() {
