@@ -2,7 +2,7 @@ import React from "react";
 import * as S from "../../style/home";
 import { StyleSheet } from "react-native";
 
-export default function Start() {
+export default function Home() {
   return (
     <S.Container>
       <S.Button onPress={() => alert("로그인에 성공했습니다.")}>

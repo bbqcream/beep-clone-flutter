@@ -1,6 +1,11 @@
 import React from "react";
-import Navigation from "./navigation";
+import { Tabs } from "expo-router";
 
-export default function App() {
-  return <Navigation />;
+export default function Layout() {
+  return (
+    <Tabs>
+      <Tabs.Screen name="home" options={{ title: "Home" }} />
+      <Tabs.Screen name="login" options={{ title: "Login" }} />
+    </Tabs>
+  );
 }

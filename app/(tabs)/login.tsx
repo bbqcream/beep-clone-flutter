@@ -1,30 +1,16 @@
 import React from "react";
 import * as S from "../../style/login";
-import { StyleSheet } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { StackNavigationProp } from "@react-navigation/stack";
-
-type RootStackParamList = {
-  Splash: undefined;
-  Start: undefined;
-  Login: undefined;
-};
-
-type LoginScreenNavigationProp = StackNavigationProp<
-  RootStackParamList,
-  "Login"
->;
 
 export default function Login() {
-  const navigation = useNavigation<LoginScreenNavigationProp>();
   return (
     <S.Container>
       <S.TopContainer>
-        <S.ArrowTouch onPress={() => navigation.navigate("Start")}>
-          <S.Arrow source={require("../../../assets/images/arrow.png")} />
+        <S.ArrowTouch>
+          <S.Arrow source={require("../../assets/images/arrow.png")} />
         </S.ArrowTouch>
         <S.TitleWrapper>
-          <S.Logo source={require("../../../assets/images/logo.png")} />
+          <S.Logo source={require("../../assets/images/logo.png")} />
           <S.SubTitle>스마트한 관리</S.SubTitle>
         </S.TitleWrapper>
       </S.TopContainer>
