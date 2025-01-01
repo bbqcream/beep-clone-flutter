@@ -13,13 +13,13 @@ export const TopContainer = styled.View`
   height: 35%;
 `;
 
-export const ArrowTouch = styled.TouchableOpacity``;
-
-export const Arrow = styled.Image`
+export const ArrowTouch = styled.TouchableOpacity`
   left: 10%;
   top: 10%;
   position: absolute;
 `;
+
+export const Arrow = styled.Image``;
 
 export const TitleWrapper = styled.View`
   display: flex;

@@ -1,12 +1,19 @@
 import React from "react";
 import * as S from "../../style/login";
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation } from "expo-router";
+import { StackNavigationProp } from "@react-navigation/stack";
+
+type RootStackParamList = {
+  Home: undefined;
+};
 
 export default function Login() {
+  const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
+
   return (
     <S.Container>
       <S.TopContainer>
-        <S.ArrowTouch>
+        <S.ArrowTouch onPress={() => navigation.navigate("Home")}>
           <S.Arrow source={require("../../assets/images/arrow.png")} />
         </S.ArrowTouch>
         <S.TitleWrapper>
